@@ -81,9 +81,12 @@
     hasRowConflictAt: function (rowIndex) {
       var row = this.get(rowIndex);
       var count = 0;
-      row.forEach((element) => {
-        count += element;
-      });
+      for (let i = 0; i < this.get('n'); i++) {
+        count += row[i];
+      }
+      // row.forEach((element) => {
+      //   count += element;
+      // });
       return count > 1;
     },
 
